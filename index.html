@@ -654,7 +654,7 @@
   </div>
 
   <div class="box-love">
-    <button class="button-love" onclick="showDialog()">Click Me!</button>
+    <button class="button-love" id="showLoveButton">Click Me!</button>
   </div>
 
   <div id="loveDialog">
@@ -662,14 +662,32 @@
   </div>
 
   <script>
-    function showDialog() {
-      var dialog = document.getElementById("loveDialog");
-      dialog.style.display = "block";
+    document.addEventListener("DOMContentLoaded", function () {
+      const dialog = document.getElementById("loveDialog");
+      const showButton = document.getElementById("showLoveButton");
 
-      setTimeout(function () {
-        dialog.style.display = "none";
-      }, 5000);
-    }
+      function showLoveDialog() {
+        dialog.classList.remove("hide");
+        dialog.classList.add("show");
+        dialog.style.display = "block";
+
+        // Set timer untuk menutup otomatis setelah 5 detik
+        setTimeout(() => {
+          hideLoveDialog();
+        }, 5000);
+      }
+
+      function hideLoveDialog() {
+        dialog.classList.remove("show");
+        dialog.classList.add("hide");
+        setTimeout(() => {
+          dialog.style.display = "none";
+        }, 300); // Sesuai dengan durasi animasi CSS "hide"
+      }
+
+      // Event listener untuk tombol buka dialog
+      showButton.addEventListener("click", showLoveDialog);
+    });
   </script>
 </body>
 <audio autoplay loop>
