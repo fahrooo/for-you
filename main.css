@@ -4,7 +4,6 @@ body {
   background: #000;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -16,8 +15,9 @@ p {
 }
 
 .p-love {
-  padding: 30px;
   width: 100%;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .p-lirik {
@@ -25,10 +25,10 @@ p {
   line-height: 3px;
   text-align: justify;
   -webkit-background-size: cover;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background: url(image.jpeg) no-repeat center/auto;
+  background: url(image.png) no-repeat center/contain;
   background-attachment: fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgb(225, 225, 255, 0);
