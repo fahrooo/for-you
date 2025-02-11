@@ -6,12 +6,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 p {
-  height: 100%;
-  font-size: 12px;
-  line-height: 8px;
+  text-align: end;
+  margin: 0;
+  font-size: 6px;
+}
+
+.p-love {
+  padding: 30px;
+  width: 100%;
+}
+
+.p-lirik {
+  font-size: 4px;
+  line-height: 3px;
   text-align: justify;
   -webkit-background-size: cover;
   background-size: auto;
