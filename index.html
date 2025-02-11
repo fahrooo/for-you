@@ -652,6 +652,25 @@
       but in my own way, I always try to make you feel loved.
     </p>
   </div>
+
+  <div class="box-love">
+    <button class="button-love" onclick="showDialog()">Click Me!</button>
+  </div>
+
+  <div id="loveDialog">
+    <img src="./voucher.png" alt="Love Image" />
+  </div>
+
+  <script>
+    function showDialog() {
+      var dialog = document.getElementById("loveDialog");
+      dialog.style.display = "block";
+
+      setTimeout(function () {
+        dialog.style.display = "none";
+      }, 10000);
+    }
+  </script>
 </body>
 <audio autoplay loop>
   <source src="./music.mp3" type="audio/mpeg" />
