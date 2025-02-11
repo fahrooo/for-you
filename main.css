@@ -16,12 +16,13 @@ p {
 }
 
 .p-love {
-  padding: 30px;
   width: 100%;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .p-lirik {
-  font-size: 4px;
+  font-size: 3.5px;
   line-height: 3px;
   text-align: justify;
   -webkit-background-size: cover;
