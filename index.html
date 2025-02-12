@@ -661,6 +661,11 @@
     <img src="./voucher.png" alt="Love Image" />
   </div>
 
+  <audio id="myAudio" autoplay loop>
+    <source src="./music.mp3" type="audio/mpeg" />
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const dialog = document.getElementById("loveDialog");
@@ -687,10 +692,12 @@
 
       // Event listener untuk tombol buka dialog
       showButton.addEventListener("click", showLoveDialog);
+
+      window.addEventListener("load", function () {
+        var audio = document.getElementById("myAudio");
+        audio.currentTime = 0; // Setel ulang waktu pemutaran
+        audio.play(); // Mulai ulang pemutaran
+      });
     });
   </script>
 </body>
-<audio autoplay loop>
-  <source src="./music.mp3" type="audio/mpeg" />
-  Browser Anda tidak mendukung elemen audio.
-</audio>
